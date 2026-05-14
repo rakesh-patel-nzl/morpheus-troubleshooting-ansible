@@ -1,0 +1,8 @@
+---
+- hosts: app_servers,aio_server
+  become: true
+  vars_files: sudo.yml
+  any_errors_fatal: true
+  roles:
+    - stop_morpheus
+

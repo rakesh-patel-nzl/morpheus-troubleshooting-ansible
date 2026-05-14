@@ -1,0 +1,8 @@
+---
+- hosts: db_servers
+  become: true
+  vars_files: sudo.yml
+  any_errors_fatal: true
+  roles:
+    - start_innodb
+
